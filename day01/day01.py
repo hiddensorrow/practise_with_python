@@ -1,3 +1,5 @@
+#往图片右上角添加红色数字
+#2018年03月13日18:12:27
 from PIL import Image, ImageDraw, ImageFont
 
 im = Image.open('dingchun.JPEG')
