@@ -19,7 +19,8 @@ while times < 200:
     if res not in ans:
         ans[res] = 1
         times += 1
-        sql = "insert into cuponlist(cupon) values (\'%s\')" % res
-        cursor.execute(sql)
+        # sql = "insert into cuponlist(cupon) values (\'%s\')" % res
+        # cursor.execute(sql)
+        cursor.execute("insert into cuponlist(cupon) values (%s)", res)
 db.commit()
 db.close()
