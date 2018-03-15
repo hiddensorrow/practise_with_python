@@ -23,4 +23,9 @@ while times < 200:
         # cursor.execute(sql)
         cursor.execute("insert into cuponlist(cupon) values (%s)", res)
 db.commit()
+cursor = db.cursor(cursor=pymysql.cursors.DictCursor)
+cursor.execute("select * from cuponlist")
+results = cursor.fetchall()
+for result in results:
+    print(result)
 db.close()
